@@ -1,0 +1,1278 @@
+drop table if exists favorite_course;
+drop table if exists favorite_food;
+drop table if exists friend_info;
+drop table if exists preferred_pl;
+drop table if exists student;
+drop table if exists career_path;
+drop table if exists eating_style;
+drop table if exists mbti;
+
+
+CREATE TABLE `favorite_course` (
+  `nickname` char(100) DEFAULT NULL,
+  `course` char(100) DEFAULT NULL
+);
+
+
+CREATE TABLE `favorite_food` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `food` varchar(30) DEFAULT NULL
+);
+
+CREATE TABLE `friend_info` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `friend_nickname` varchar(30) DEFAULT NULL
+);
+
+CREATE TABLE `preferred_pl` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `lang` varchar(30) DEFAULT NULL
+);
+
+ 
+CREATE TABLE `student` (
+  `nickname` varchar(30) DEFAULT NULL,
+  `section` varchar(15) DEFAULT NULL
+);
+
+
+CREATE TABLE `career_path` (
+  `nickname` varchar(30) NOT NULL,
+  `direction` varchar(30) DEFAULT NULL);
+
+
+CREATE TABLE `eating_style` (
+  `nickname` varchar(30) NOT NULL,
+  `sauce` varchar(30) DEFAULT NULL,
+  `mint` varchar(30) DEFAULT NULL
+);
+
+ 
+CREATE TABLE `mbti` (
+  `nickname` char(100) NOT NULL,
+  `gender` char(10) DEFAULT NULL,
+  `mbti_type` char(4) DEFAULT NULL
+);
+
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('0e','Undecided'),
+	 ('10fp','Public Corporation'),
+	 ('asdfdsa','Academia/Graduate School'),
+	 ('atm34','NA'),
+	 ('atreides','Public Corporation'),
+	 ('b1n','Undecided'),
+	 ('bean','Startup'),
+	 ('binch','Large Company'),
+	 ('binq','Large Company'),
+	 ('buych1','Large Company');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('chae','Large Company'),
+	 ('chi8ya72','Undecided'),
+	 ('chloe','Undecided'),
+	 ('chobook','Academia/Graduate School'),
+	 ('coffee','Undecided'),
+	 ('cutdy','Academia/Graduate School'),
+	 ('databases','Large Company'),
+	 ('dGimbap','Undecided'),
+	 ('dorj','Academia/Graduate School'),
+	 ('dotorimuk','Startup');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('drw','Public Corporation'),
+	 ('Emi','Large Company'),
+	 ('espoir','NA'),
+	 ('FelixBrown','Undecided'),
+	 ('gang','Public Corporation'),
+	 ('gm','Academia/Graduate School'),
+	 ('goatCR7','Large Company'),
+	 ('gomi','NA'),
+	 ('gosungosun','Large Company'),
+	 ('greencode','Public Corporation');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('gusals911','Miscellaneous'),
+	 ('gyuggi','NA'),
+	 ('haedal','Public Corporation'),
+	 ('hamtori','Large Company'),
+	 ('hans','Large Company'),
+	 ('hjh040506','Large Company'),
+	 ('honey','Large Company'),
+	 ('hwiizz','Startup'),
+	 ('hyukjin0324','Large Company'),
+	 ('I_am_youngjoon','Large Company');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('ikmyeong2','Public Corporation'),
+	 ('imddungi','Startup'),
+	 ('indy','Undecided'),
+	 ('J','Startup'),
+	 ('Jay','Large Company'),
+	 ('jedrzej','Startup'),
+	 ('jgf295','Freelance'),
+	 ('jhkim','NA'),
+	 ('jiang','NA'),
+	 ('Jindol','Undecided');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('jinnho','Large Company'),
+	 ('jjamm','Large Company'),
+	 ('jjiikkii','Large Company'),
+	 ('jkh','Undecided'),
+	 ('Kitty','Undecided'),
+	 ('kjw','Public Corporation'),
+	 ('kk','NA'),
+	 ('kkoffff','Public Corporation'),
+	 ('KM','Undecided'),
+	 ('KONG','Academia/Graduate School');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('ksh','Undecided'),
+	 ('kyung','Large Company'),
+	 ('lemon','Public Corporation'),
+	 ('luxe','Academia/Graduate School'),
+	 ('minimini','Academia/Graduate School'),
+	 ('minlef','NA'),
+	 ('mrlee','Large Company'),
+	 ('myui','Small & Medium Company'),
+	 ('nayana','Academia/Graduate School'),
+	 ('Neeko','Undecided');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('nh','Large Company'),
+	 ('njz','Startup'),
+	 ('noop','Undecided'),
+	 ('penguin','Academia/Graduate School'),
+	 ('pingu','Public Corporation'),
+	 ('pizza','Academia/Graduate School'),
+	 ('prof','Academia/Graduate School'),
+	 ('qwer','Public Corporation'),
+	 ('Riceshower1','Academia/Graduate School'),
+	 ('sadie','NA');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('shu','Undecided'),
+	 ('Simple','Large Company'),
+	 ('SIUU','Large Company'),
+	 ('smdg','Undecided'),
+	 ('sndlw','Undecided'),
+	 ('snfd','Large Company'),
+	 ('sonyo','Public Corporation'),
+	 ('soo','Undecided'),
+	 ('stone','Large Company'),
+	 ('stud','Academia/Graduate School');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('student','Large Company'),
+	 ('stuyan','Academia/Graduate School'),
+	 ('swk','Large Company'),
+	 ('SY','Public Corporation'),
+	 ('unvoider','Public Corporation'),
+	 ('wdragon','Academia/Graduate School'),
+	 ('wonji','NA'),
+	 ('wooclick','Public Corporation'),
+	 ('wovow','Undecided'),
+	 ('Yankee','Large Company');
+INSERT INTO career_path (nickname,direction) VALUES
+	 ('yarr','Startup'),
+	 ('yoon','Public Corporation'),
+	 ('yuu','Public Corporation'),
+	 ('ZayZayYa','Miscellaneous'),
+	 ('늉','Academia/Graduate School'),
+	 ('왐','Undecided'),
+	 ('쥬','Miscellaneous'),
+	 ('파송송계란탁','Large Company'),
+	 ('호박','Public Corporation');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('10fp','Pour sauce','Yes'),
+	 ('asdfdsa','Dip sauce','No'),
+	 ('atm34','Pour sauce','No'),
+	 ('atreides','Pour sauce','Yes'),
+	 ('b1n','Pour sauce','No'),
+	 ('bean','Dip sauce','No'),
+	 ('binch','Both','No'),
+	 ('binq','Dip sauce','No'),
+	 ('Braustübl','Dip sauce','Yes'),
+	 ('buych1','Both','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('chae','Both','Yes'),
+	 ('chi8ya72','Both','Yes'),
+	 ('chloe','Dip sauce','No'),
+	 ('chobook','Both','No'),
+	 ('coffee','Dip sauce','No'),
+	 ('cutdy','Dip sauce','No'),
+	 ('Dansoeun','Dip sauce','No'),
+	 ('databases','Both','Yes'),
+	 ('dGimbap','Both','No'),
+	 ('dorj','Both','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('dotorimuk','Both','Yes'),
+	 ('drw','Both','Yes'),
+	 ('espoir','NA','NA'),
+	 ('FelixBrown','Both','Yes'),
+	 ('gang','Dip sauce','Yes'),
+	 ('gm','Dip sauce','No'),
+	 ('goatCR7','Both','Yes'),
+	 ('gomi','Both','Yes'),
+	 ('gosungosun','Dip sauce','NA'),
+	 ('greencode','Both','Yes');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('gusals911','Both','No'),
+	 ('gyuggi','NA','NA'),
+	 ('haedal','Both','No'),
+	 ('hamtori','Both','No'),
+	 ('hans','Pour sauce','No'),
+	 ('hjh040506','Pour sauce','No'),
+	 ('honey','Pour sauce','No'),
+	 ('hwiizz','Both','Yes'),
+	 ('hyukjin0324','Dip sauce','Yes'),
+	 ('I_am_youngjoon','Both','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('ikmyeong2','Both','Yes'),
+	 ('indy','Pour sauce','Yes'),
+	 ('J','Dip sauce','Yes'),
+	 ('Jay','Both','No'),
+	 ('jedrzej','Dip sauce','Yes'),
+	 ('jgf295','Both','yes'),
+	 ('jhkim','NA','NA'),
+	 ('Jindol','Both','Yes'),
+	 ('jinnho','Both','No'),
+	 ('jjamm','Both','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('jjiikkii','Both','No'),
+	 ('jkh','Both','Yes'),
+	 ('Kitty','Dip sauce','No'),
+	 ('kjw','Both','Yes'),
+	 ('kk','Both','No'),
+	 ('kkoffff','Both','No'),
+	 ('KM','Pour sauce','No'),
+	 ('KONG','Dip sauce','Yes'),
+	 ('ksh','Both','NA'),
+	 ('kyung','Pour sauce','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('lemon','Pour sauce','No'),
+	 ('luxe','NA','Yes'),
+	 ('minimini','Both','Yes'),
+	 ('minlef','Both','Yes'),
+	 ('mrlee','Both','No'),
+	 ('myui','Both','No'),
+	 ('nayana','Dip sauce','No'),
+	 ('Neeko','Both','Yes'),
+	 ('nh','Dip sauce','No'),
+	 ('njz','Dip sauce','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('noop','Both','Yes'),
+	 ('penguin','Dip sauce','No'),
+	 ('pingu','Both','No'),
+	 ('pizza','Both','Yes'),
+	 ('prof','Both','Yes'),
+	 ('qwer','Both','Yes'),
+	 ('Riceshower1','Both','No'),
+	 ('sadie','Both','No'),
+	 ('shu','Both','No'),
+	 ('Simple','Dip sauce','No');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('SIUU','Both','No'),
+	 ('smdg','Dip sauce','No'),
+	 ('sndlw','Both','No'),
+	 ('snfd','Both','Yes'),
+	 ('sonyo','Pour sauce','No'),
+	 ('soo','Both','Yes'),
+	 ('stone','Both','Yes'),
+	 ('stud','Both','Yes'),
+	 ('student','Dip sauce','No'),
+	 ('stuyan','Dip sauce','Yes');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('swk','Both','No'),
+	 ('SY','Both','No'),
+	 ('unvoider','Both','Yes'),
+	 ('wdragon','Both','No'),
+	 ('wooclick','Both','No'),
+	 ('wovow','Both','No'),
+	 ('Yankee','Dip sauce','No'),
+	 ('yarr','Both','No'),
+	 ('yoon','Both','No'),
+	 ('yuu','Pour sauce','Yes');
+INSERT INTO eating_style (nickname,sauce,mint) VALUES
+	 ('ZayZayYa','Both','No'),
+	 ('늉','Both','No'),
+	 ('왐','Both','No'),
+	 ('쥬','Dip sauce','Yes'),
+	 ('파송송계란탁','Dip sauce','Yes'),
+	 ('호박','Pour sauce','Yes');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('chi8ya72','AI'),
+	 ('SIUU','OS'),
+	 ('bean','AI'),
+	 ('FelixBrown','OS'),
+	 ('FelixBrown','CA'),
+	 ('FelixBrown','SP'),
+	 ('hamtori','AI'),
+	 ('KONG','AI'),
+	 ('prof','AI'),
+	 ('prof','PL');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('wooclick','Network'),
+	 ('wooclick','AI'),
+	 ('asdfdsa','OS'),
+	 ('asdfdsa','CA'),
+	 ('noop','AI'),
+	 ('haedal','AI'),
+	 ('atreides','Compiler'),
+	 ('atreides','SP'),
+	 ('coffee','DB'),
+	 ('minimini','AI');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('minimini','PL'),
+	 ('wovow','Web'),
+	 ('yarr','DB'),
+	 ('Kitty','OS'),
+	 ('Yankee','PL'),
+	 ('Yankee','AI'),
+	 ('파송송계란탁','DB'),
+	 ('qwer','PL'),
+	 ('qwer','Algorithm'),
+	 ('Dansoeun','AI');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('ikmyeong2','DB'),
+	 ('파송송계란탁','Algorithm'),
+	 ('yuu','AI'),
+	 ('nh','OS'),
+	 ('J','AI'),
+	 ('b1n','CA'),
+	 ('b1n','Algorithm'),
+	 ('dotorimuk','English'),
+	 ('stud','ML'),
+	 ('stud','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('J','DB'),
+	 ('penguin','OS'),
+	 ('penguin','DB'),
+	 ('nayana','ML'),
+	 ('kkoffff','PL'),
+	 ('greencode','ML'),
+	 ('dorj','DB'),
+	 ('jkh','AI'),
+	 ('indy','ML'),
+	 ('drw','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('drw','PL'),
+	 ('imddungi','AI'),
+	 ('sadie','DB'),
+	 ('shu','DB'),
+	 ('atm34','AI'),
+	 ('sndlw','AI'),
+	 ('goatCR7','PL'),
+	 ('Njz','DB'),
+	 ('Njz','ROS'),
+	 ('sndlw','PL');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('pizza','AI'),
+	 ('Jindol','AI'),
+	 ('goatCR7','AI'),
+	 ('jinnho','DB'),
+	 ('jinnho','AI'),
+	 ('snfd','DB'),
+	 ('osm','Game'),
+	 ('pizza','PL'),
+	 ('jjiikkii','OS'),
+	 ('jjiikkii','AI');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('chobook','OS'),
+	 ('chobook','DB'),
+	 ('jedrzej','SP'),
+	 ('jjamm','DB'),
+	 ('jjamm','IR'),
+	 ('yoon','DB'),
+	 ('Emi','NLP'),
+	 ('Emi','CV'),
+	 ('wdragon','AI'),
+	 ('wdragon','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('wdragon','CV'),
+	 ('stone','Mobile Programming'),
+	 ('빈츠','JAVA'),
+	 ('빈츠','DS'),
+	 ('swk','DB'),
+	 ('honey','ML'),
+	 ('hehe','AI'),
+	 ('KM','DB'),
+	 ('honey','CS'),
+	 ('hjh040506','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('databases','przede mna droga ktora znam'),
+	 ('swk','AI'),
+	 ('stone','DB'),
+	 ('kk','DB'),
+	 ('Myui','DB'),
+	 ('kk','NA'),
+	 ('unvoider','OS'),
+	 ('lemon','DB'),
+	 ('lemon','AI'),
+	 ('gusals911','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('dGimbap','DB'),
+	 ('binch','DB'),
+	 ('쥬','DB'),
+	 ('Braustübl','FFAO'),
+	 ('Myui','AI'),
+	 ('mrlee','OS'),
+	 ('mrlee','DB'),
+	 ('soo','DB'),
+	 ('soo','AI'),
+	 ('unvoider','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('Mario','SE'),
+	 ('Mario','ML'),
+	 ('gang','DB'),
+	 ('Jay','DB'),
+	 ('Jay','French'),
+	 ('wonji','PL'),
+	 ('Neeko','AI'),
+	 ('Neeko','DB'),
+	 ('Neeko','Physics'),
+	 ('I_am_youngjoon','AI');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('gang','OS'),
+	 ('Riceshower1','DB'),
+	 ('늉','DB'),
+	 ('왐','DB'),
+	 ('SY','DB'),
+	 ('Simple','AI'),
+	 ('Simple','DB'),
+	 ('hans','DB'),
+	 ('stuyan','DB'),
+	 ('stuyan','AI');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('luxe','AI'),
+	 ('hans','AI'),
+	 ('chae','DB'),
+	 ('gm','DB'),
+	 ('smdg','AI'),
+	 ('buych1','OS'),
+	 ('kjw','DB'),
+	 ('kjw','AI'),
+	 ('ksh','DB'),
+	 ('cutdy','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('cutdy','AI'),
+	 ('chi8ya72','DB'),
+	 ('dotorimuk','OS'),
+	 ('sadie','OS'),
+	 ('ZayZayYa','DB'),
+	 ('Chloe','DB'),
+	 ('0e','DB'),
+	 ('0e','AI'),
+	 ('databases','Network'),
+	 ('student','DB');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('minlef','CG'),
+	 ('minlef','DS'),
+	 ('chae','Math'),
+	 ('sonyo','DB'),
+	 ('ksh','DS'),
+	 ('ksh','OS'),
+	 ('jiang','DB'),
+	 ('hyukjin0324','AI'),
+	 ('hyukjin0324','DB'),
+	 ('binq','DS');
+INSERT INTO favorite_course (nickname,course) VALUES
+	 ('wonji','NA'),
+	 ('pingu','AI'),
+	 ('gomi','DS'),
+	 ('gosungosun','DS'),
+	 ('espoir','NA'),
+	 ('jhkim','AI'),
+	 ('10fp','CA'),
+	 ('10fp','OS');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('prof','Chicken'),
+	 ('prof','삼겹살'),
+	 ('dotorimuk','Chicken'),
+	 ('yuu','Hamburger'),
+	 ('drw','Chicken'),
+	 ('drw','떡볶이'),
+	 ('asdfdsa','Chicken'),
+	 ('dotorimuk','Hamburger'),
+	 ('KONG','감자튀김'),
+	 ('yarr','Beef');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('sadie','떡볶이'),
+	 ('SIUU','삼쏘'),
+	 ('SIUU','김치말이국수'),
+	 ('pizza','Chicken'),
+	 ('pizza','Egg'),
+	 ('indy','Dumpling'),
+	 ('indy','Pasta'),
+	 ('atreides','떡볶이'),
+	 ('wovow','Chicken'),
+	 ('penguin','Chicken');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('penguin','국밥'),
+	 ('jinnho','Pizza'),
+	 ('jinnho','Chicken'),
+	 ('jjiikkii','Chicken'),
+	 ('jjiikkii','삼겹살'),
+	 ('FelixBrown','Pizza'),
+	 ('bean','Chicken'),
+	 ('bean','김치'),
+	 ('b1n','Chicken'),
+	 ('b1n','Hamburger');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('haedal','Chicken'),
+	 ('coffee','Coffee'),
+	 ('Kitty','떡볶이'),
+	 ('Kitty','샤브샤브'),
+	 ('cutdy','제육볶음'),
+	 ('cutdy','Hamburger'),
+	 ('ikmyeong2','삼겹살'),
+	 ('snfd','Chicken'),
+	 ('qwer','Chicken'),
+	 ('imddungi','육회비빔밥');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('imddungi','Sushi'),
+	 ('파송송계란탁','Chicken'),
+	 ('파송송계란탁','Beef'),
+	 ('wooclick','Shrimp'),
+	 ('stud','Chinese cuisine'),
+	 ('J','Chicken'),
+	 ('J','Pasta'),
+	 ('Dansoeun','떡볶이'),
+	 ('nayana','삼겹살'),
+	 ('njz','제육볶음');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('njz','Hamburger'),
+	 ('shu','Hamburger'),
+	 ('ZayZayYa','Nakgopsae'),
+	 ('greencode','Salmon'),
+	 ('jkh','Chicken'),
+	 ('chi8ya72','Hamburger'),
+	 ('sndlw','Chicken'),
+	 ('sndlw','Beef'),
+	 ('Yankee','Pizza'),
+	 ('goatCR7','Pizza');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('noop','Chicken'),
+	 ('noop','Salmon'),
+	 ('atm34','김치찜'),
+	 ('dorj','두부'),
+	 ('kkoffff','Pizza'),
+	 ('kkoffff','삼겹살'),
+	 ('databases','Fried rice'),
+	 ('binch','Chicken'),
+	 ('dGimbap','Ramen'),
+	 ('hjh040506','Chicken');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('hjh040506','Sushi'),
+	 ('gusals911','Chicken'),
+	 ('yoon','Pizza'),
+	 ('hans','떡볶이'),
+	 ('chobook','Chicken'),
+	 ('chobook','샤브샤브'),
+	 ('soo','요아정'),
+	 ('soo','떡볶이'),
+	 ('Simple','Pizza'),
+	 ('Simple','Chicken');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('chloe','김치볶음밥'),
+	 ('왐','마라샹궈'),
+	 ('jedrzej','Chicken'),
+	 ('jedrzej','Sausage'),
+	 ('unvoider','Hamburger'),
+	 ('unvoider','Salad'),
+	 ('늉','샤브샤브'),
+	 ('gm','Pizza'),
+	 ('gm','Chicken'),
+	 ('jjamm','Chicken');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('jjamm','Beer'),
+	 ('stone','Hamburger'),
+	 ('Jay','Chicken'),
+	 ('Jay','삼겹살'),
+	 ('wdragon','Chicken'),
+	 ('wdragon','Hamburger'),
+	 ('쥬','Beef'),
+	 ('myui','Chicken'),
+	 ('10fp','Maratang'),
+	 ('I_am_youngjoon','육회비빔밥');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('I_am_youngjoon','대게'),
+	 ('swk','떡볶이'),
+	 ('swk','Sushi'),
+	 ('KM','Chicken'),
+	 ('lemon','Chicken'),
+	 ('Riceshower1','Chicken'),
+	 ('Riceshower1','Pizza'),
+	 ('Riceshower1','Hamburger'),
+	 ('Riceshower1','Sushi'),
+	 ('mrlee','Chicken');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('kyung','Chicken'),
+	 ('kyung','Pizza'),
+	 ('stuyan','Chicken'),
+	 ('stuyan','Pizza'),
+	 ('Neeko','비빔밥'),
+	 ('Neeko','미역국'),
+	 ('smdg','Nachos'),
+	 ('smdg','Sushi'),
+	 ('student','삼겹살'),
+	 ('Jindol','Hamburger');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('hamtori','Pizza'),
+	 ('nh','Cake'),
+	 ('0e','Chicken'),
+	 ('0e','삼겹살'),
+	 ('kk','Fruit mochi'),
+	 ('kk','Mimi'),
+	 ('chae','아구찜'),
+	 ('honey','Chicken'),
+	 ('honey','소고기'),
+	 ('SY','Maratang');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('gang','Pizza'),
+	 ('buych1','Chicken'),
+	 ('buych1','삼겹살'),
+	 ('호박','육회비빔밥'),
+	 ('hwiizz','Chicken'),
+	 ('kjw','pasta'),
+	 ('Emi','Sushi'),
+	 ('gyuggi','Maratang'),
+	 ('ksh','Pizza'),
+	 ('ksh','Chicken');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('ksh','Hamburger'),
+	 ('ksh','Sushi'),
+	 ('ksh','Pasta'),
+	 ('jiang','NA'),
+	 ('hyukjin0324','Sushi'),
+	 ('hyukjin0324','곱창'),
+	 ('binq','Chicken'),
+	 ('wonji','PIZZA'),
+	 ('luxe','Sushi'),
+	 ('pingu','noodle');
+INSERT INTO favorite_food (nickname,food) VALUES
+	 ('jgf295','Carbonara Spaghetti'),
+	 ('jgf295','Meat'),
+	 ('espoir','Maratang'),
+	 ('jhkim','Chicken'),
+	 ('minlef','Seafood'),
+	 ('gomi','Chicken'),
+	 ('minlef','Chicken'),
+	 ('gosungosun','된장찌개');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('prof','databases'),
+	 ('prof','J'),
+	 ('prof','KM'),
+	 ('asdfdsa','Simple'),
+	 ('asdfdsa','yarr'),
+	 ('SIUU','ZayZayYa'),
+	 ('SIUU','yarr'),
+	 ('dotorimuk','gosungosun'),
+	 ('sadie','KM'),
+	 ('haedal','yarr');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('yarr','Jindol'),
+	 ('atm34','goatCR7'),
+	 ('wooclick','coffee'),
+	 ('SIUU','goatCR7'),
+	 ('dotorimuk','hamtori'),
+	 ('FelixBrown','databases'),
+	 ('KONG','lemon'),
+	 ('Yankee','SIUU'),
+	 ('penguin','osm'),
+	 ('penguin','minimini');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('atm34','hamtori'),
+	 ('KONG','coffee'),
+	 ('yuu','kk'),
+	 ('yuu','KONG'),
+	 ('Jindol','atreides'),
+	 ('coffee','gm'),
+	 ('cutdy','ZayZayYa'),
+	 ('snfd','hehe'),
+	 ('Dansoeun','jhkim'),
+	 ('ikmyeong2','prof');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('qwer','J'),
+	 ('jinnho','파송송계란탁'),
+	 ('jinnho','J'),
+	 ('jinnho','빈츠'),
+	 ('indy','atreides'),
+	 ('indy','Jindol'),
+	 ('atreides','Kitty'),
+	 ('atreides','greencode'),
+	 ('Kitty','atreides'),
+	 ('Kitty','greencode');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('wovow','hamtori'),
+	 ('wovow','coffee'),
+	 ('wovow','shu'),
+	 ('b1n','kk'),
+	 ('imddungi','databases'),
+	 ('imddungi','goatCR7'),
+	 ('imddungi','jjiikkii'),
+	 ('J','Jindol'),
+	 ('J','hamtori'),
+	 ('nayana','J');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('jjiikkii','kong'),
+	 ('jjiikkii','J'),
+	 ('jjiikkii','KM'),
+	 ('파송송계란탁','Njz'),
+	 ('파송송계란탁','penguin'),
+	 ('stud','databases'),
+	 ('stud','J'),
+	 ('bean','asdfdsa'),
+	 ('noop','databases'),
+	 ('njz','늉');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('shu','prof'),
+	 ('shu','databases'),
+	 ('ZayZayYa','prof'),
+	 ('ZayZayYa','cutdy'),
+	 ('greencode','atreides'),
+	 ('greencode','Kitty'),
+	 ('goatCR7','imddungi'),
+	 ('goatCR7','SIUU'),
+	 ('dorj','databases'),
+	 ('drw','sadie');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('sadie','drw'),
+	 ('kkoffff','databases'),
+	 ('kkoffff','J'),
+	 ('kkoffff','KM'),
+	 ('pizza','databases'),
+	 ('pizza','J'),
+	 ('pizza','KM'),
+	 ('sndlw','luxe'),
+	 ('sndlw','hamtori'),
+	 ('sndlw','penguin');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('binch','빈츠'),
+	 ('unvoider','databases'),
+	 ('unvoider','Mario'),
+	 ('Pigeonlabs','prof'),
+	 ('databases','pizza'),
+	 ('myui','Neeko'),
+	 ('hjh040506','honey'),
+	 ('hjh040506','KONG'),
+	 ('hjh040506','qwer'),
+	 ('soo','hehe');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('soo','Jay'),
+	 ('soo','dGimbap'),
+	 ('jjamm','chobook'),
+	 ('dGimbap','Neeko'),
+	 ('dGimbap','soo'),
+	 ('dGimbap','yoon'),
+	 ('yoon','pizza'),
+	 ('jedrzej','Mario'),
+	 ('myui','J'),
+	 ('hehe','soo');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('hehe','Jay'),
+	 ('hehe','dGimbap'),
+	 ('chobook','jjamm'),
+	 ('chobook','yarr'),
+	 ('chobook','SIUU'),
+	 ('Simple','lemon'),
+	 ('Simple','yoon'),
+	 ('Simple','student'),
+	 ('stone','SIUU'),
+	 ('hans','pizza');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('wdragon','prof'),
+	 ('wdragon','I_am_youngjoon'),
+	 ('wdragon','databases'),
+	 ('왐','늉'),
+	 ('왐','쥬'),
+	 ('늉','쥬'),
+	 ('늉','왐'),
+	 ('KM','prof'),
+	 ('stuyan','Yankee'),
+	 ('Jay','soo');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('Jay','hehe'),
+	 ('Jay','dGimbap'),
+	 ('gm','Mario'),
+	 ('gm','jgf295'),
+	 ('lemon','kk'),
+	 ('쥬','늉'),
+	 ('쥬','왐'),
+	 ('I_am_youngjoon','chae'),
+	 ('I_am_youngjoon','wdragon'),
+	 ('gusals911','penguin');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('gusals911','pizza'),
+	 ('gusals911','J'),
+	 ('swk','prof'),
+	 ('10fp','lemon'),
+	 ('Braustübl','chae'),
+	 ('Braustübl','Emi'),
+	 ('Braustübl','Mario'),
+	 ('Riceshower1','databases'),
+	 ('mrlee','KM'),
+	 ('mrlee','J');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('kyung','빈츠'),
+	 ('kyung','wonji'),
+	 ('kyung','10fp'),
+	 ('Neeko','myui'),
+	 ('I_am_youngjoon','chobook'),
+	 ('smdg','yuu'),
+	 ('Jindol','yarr'),
+	 ('hamtori','wovow'),
+	 ('nh','qwer'),
+	 ('nh','J');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('nh','indy'),
+	 ('chloe','0e'),
+	 ('0e','Chloe'),
+	 ('kk','Braustübl'),
+	 ('chae','I_am_youngjoon'),
+	 ('chae','swk'),
+	 ('student','J'),
+	 ('honey',NULL),
+	 ('SY','GANG'),
+	 ('gang','SY');
+INSERT INTO friend_info (nickname,friend_nickname) VALUES
+	 ('buych1',NULL),
+	 ('hwiizz','databases'),
+	 ('kjw',NULL),
+	 ('gosungosun',NULL),
+	 ('ksh',NULL),
+	 ('hyukjin0324',NULL),
+	 ('luxe','luxe'),
+	 ('jgf295','databases'),
+	 ('minlef','gomi'),
+	 ('gomi','minlef');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('0e','female','INFP'),
+	 ('10fp','male','INFP'),
+	 ('asdfdsa','male','ISFJ'),
+	 ('atm34','male','INTP'),
+	 ('atreides','female','INFP'),
+	 ('b1n','male','ISTJ'),
+	 ('bean','female','ESTJ'),
+	 ('binch','male','ISTJ'),
+	 ('binq','male','INTP'),
+	 ('Braustübl','male','INTP');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('buych1','male','ISFJ'),
+	 ('chae','male','ISTJ'),
+	 ('chi8ya72','male','ISTP'),
+	 ('Chloe','female','ENTP'),
+	 ('chobook','male','ENTP'),
+	 ('coffee','female','ISFJ'),
+	 ('cutdy','male','ESFJ'),
+	 ('Dansoeun','female','ESFJ'),
+	 ('databases','male','ISTP'),
+	 ('dGimbap','female','INTJ');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('dorj','female','INTP'),
+	 ('dotorimuk','male','ENTJ'),
+	 ('drw','female','ISTJ'),
+	 ('Emi','male','ENTP'),
+	 ('espoir','NA','INTJ'),
+	 ('FelixBrown','male','INFP'),
+	 ('gang','male','ENTP'),
+	 ('gm','famale','INTJ'),
+	 ('goatCR7','male','INTJ'),
+	 ('gomi','female','ISFJ');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('gosungosun','male','INFP'),
+	 ('greencode','female','INFP'),
+	 ('gusals911','male','ISTP'),
+	 ('gyuggi','female','INFP'),
+	 ('haedal','male','ISFJ'),
+	 ('hamtori','female','ISTJ'),
+	 ('hans','female','INFJ'),
+	 ('hehe','female','ENFP'),
+	 ('hjh040506','male','ISTP'),
+	 ('honey','male','ESFP');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('hyukjin0324','male','ISTJ'),
+	 ('I_am_youngjoon','male','ENTP'),
+	 ('ikmyeong2','male','INTJ'),
+	 ('imddungi','male','ENTP'),
+	 ('indy','female','ISTP'),
+	 ('J','male','ENFJ'),
+	 ('Jay','male','INTP'),
+	 ('jedrzej','male','ISFJ'),
+	 ('jhkim','male','INTP'),
+	 ('jiang','male','NA');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('Jindol','male','ISFP'),
+	 ('jinnho','male','INFJ'),
+	 ('jjamm','male','ISFP'),
+	 ('jjiikkii','male','ISTP'),
+	 ('jkh','male','INTP'),
+	 ('Kitty','female','ISTP'),
+	 ('kjw','female','INTJ'),
+	 ('kk','female','ENTP'),
+	 ('kkoffff','male','INTJ'),
+	 ('KM','male','INTP');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('KONG','female','INTP'),
+	 ('ksh','male','istp'),
+	 ('lemon','female','ISFJ'),
+	 ('luxe','female','ISFP'),
+	 ('Mario','male','ENTP'),
+	 ('minimini','male','ENTP'),
+	 ('minlef','male','ISTJ'),
+	 ('mrlee','male','INTP'),
+	 ('Myui','male','INFP'),
+	 ('nayana','female','ESTJ');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('Neeko','male','ENTP'),
+	 ('nh','female','INTJ'),
+	 ('Njz','male','ISTP'),
+	 ('noop','male','INTP'),
+	 ('osm','male','INFP'),
+	 ('penguin','male','ISTP'),
+	 ('Pigeonlabs','male','INTJ'),
+	 ('pizza','female','ESFJ'),
+	 ('prof','male','INTJ'),
+	 ('qwer','female','INTP');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('Riceshower1','male','ISFP'),
+	 ('sadie','female','ESTJ'),
+	 ('shu','male','INFJ'),
+	 ('Simple','male','ISFJ'),
+	 ('SIUU','male','ESTJ'),
+	 ('smdg','female','INTP'),
+	 ('sndlw','male','ISTJ'),
+	 ('snfd','female','INTJ'),
+	 ('sonyo','female','INFP'),
+	 ('soo','female','ESTJ');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('stone','male','ISTJ'),
+	 ('stud','male','ESTP'),
+	 ('student','female','ISFP'),
+	 ('stuyan','female','INFJ'),
+	 ('swk','female','ISFJ'),
+	 ('SY','female','ISTP'),
+	 ('unvoider','male','ISFJ'),
+	 ('wdragon','male','INTJ'),
+	 ('wonji','male','ISTP'),
+	 ('wooclick','male','INTJ');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('wovow','male','INFP'),
+	 ('Yankee','male','ESFJ'),
+	 ('yarr','male','INFP'),
+	 ('yoon','female','INTJ'),
+	 ('yuu','female','ISFP'),
+	 ('ZayZayYa','male','ESTJ'),
+	 ('늉','female','ESTJ'),
+	 ('빈츠','male','INTP'),
+	 ('왐','female','INTP'),
+	 ('쥬','female','ISTP');
+INSERT INTO mbti (nickname,gender,mbti_type) VALUES
+	 ('파송송계란탁','male','INTJ'),
+	 ('호박','female','ENFP');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('prof','C++'),
+	 ('prof','Java'),
+	 ('haedal','C++'),
+	 ('haedal','Python'),
+	 ('wooclick','C++'),
+	 ('wooclick','C'),
+	 ('KONG','C++'),
+	 ('SIUU','C++'),
+	 ('SIUU','Python'),
+	 ('prof','COBOL');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('asdfdsa','Python'),
+	 ('sadie','python'),
+	 ('yarr','Java'),
+	 ('파송송계란탁','Java'),
+	 ('파송송계란탁','python'),
+	 ('b1n','python'),
+	 ('b1n','Java'),
+	 ('jkh','c++'),
+	 ('Kitty','C'),
+	 ('imddungi','python');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('imddungi','Javascript'),
+	 ('cutdy','C'),
+	 ('cutdy','Python'),
+	 ('sndlw','Python'),
+	 ('sndlw','Java'),
+	 ('jjiikkii','C'),
+	 ('jjiikkii','python'),
+	 ('indy','C'),
+	 ('indy','python'),
+	 ('bean','Python');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('penguin','Rust'),
+	 ('penguin','C'),
+	 ('penguin','Swift'),
+	 ('snfd','Java'),
+	 ('atreides','Python'),
+	 ('wovow','C'),
+	 ('wovow','Python'),
+	 ('FelixBrown','C'),
+	 ('coffee','C'),
+	 ('coffee','C++');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('ikmyeong2','C++'),
+	 ('ikmyeong2','C'),
+	 ('nayana','C'),
+	 ('nayana','python'),
+	 ('jinnho','C'),
+	 ('jinnho','Java'),
+	 ('drw','C++'),
+	 ('drw','Java'),
+	 ('stud','python'),
+	 ('stud','SQL');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('greencode','C'),
+	 ('greencode','NA'),
+	 ('shu','C'),
+	 ('shu','Java'),
+	 ('njz','Java'),
+	 ('njz','C'),
+	 ('minimini','Java'),
+	 ('jjiikkii','C++'),
+	 ('jjiikkii','Java'),
+	 ('chi8ya72','python');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('goatCR7','C++'),
+	 ('Yankee','C'),
+	 ('Yankee','Java'),
+	 ('Dansoeun','C'),
+	 ('yuu','Python'),
+	 ('yuu','C'),
+	 ('noop','C++'),
+	 ('qwer','Python'),
+	 ('atm34','c++'),
+	 ('dotorimuk','Kotlin');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('dotorimuk','C'),
+	 ('ZayZayYa','Python'),
+	 ('kkoffff','Python'),
+	 ('kkoffff','Java'),
+	 ('dorj','Java'),
+	 ('pizza','c++'),
+	 ('pizza','Java'),
+	 ('binch','python'),
+	 ('Pigeonlabs','NA'),
+	 ('dGimbap','C');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('databases','Java'),
+	 ('hjh040506','C++'),
+	 ('hjh040506','Java'),
+	 ('swk','C++'),
+	 ('swk','C'),
+	 ('gusals911','Java'),
+	 ('yoon','C'),
+	 ('hans','python'),
+	 ('hans','Java'),
+	 ('gm','Python');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('gm','Java'),
+	 ('jedrzej','python'),
+	 ('jedrzej','C'),
+	 ('soo','Python'),
+	 ('soo','C'),
+	 ('chobook','python'),
+	 ('Simple','python'),
+	 ('Simple','C'),
+	 ('왐','python'),
+	 ('unvoider','C++');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('unvoider','python'),
+	 ('unvoider','Java'),
+	 ('늉','C'),
+	 ('jjamm','Javascript'),
+	 ('jjamm','Python'),
+	 ('chloe','C'),
+	 ('hehe','Python'),
+	 ('stone','C++'),
+	 ('Jay','Python'),
+	 ('Jay','C++');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('wdragon','Python'),
+	 ('쥬','python'),
+	 ('10fp','python'),
+	 ('myui','C'),
+	 ('Braustübl','NA'),
+	 ('Braustübl','Python'),
+	 ('Braustübl','Java'),
+	 ('I_am_youngjoon','python'),
+	 ('I_am_youngjoon','C'),
+	 ('KM','Python');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('lemon','Java'),
+	 ('Riceshower1','C++'),
+	 ('Riceshower1','Typescript'),
+	 ('Riceshower1','C#'),
+	 ('mrlee','C++'),
+	 ('smdg','Java'),
+	 ('stuyan','Java'),
+	 ('stuyan','Python'),
+	 ('Neeko','C'),
+	 ('Neeko','Java');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('Neeko','C#'),
+	 ('kyung','Java'),
+	 ('student','C'),
+	 ('Jindol','C'),
+	 ('hamtori','C'),
+	 ('hamtori','java'),
+	 ('nh','C++'),
+	 ('0e','C'),
+	 ('0e','Python'),
+	 ('chae','C');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('chae','Kotlin'),
+	 ('sonyo','Java'),
+	 ('honey','C++'),
+	 ('honey','Python'),
+	 ('SY','Python'),
+	 ('gang','Python'),
+	 ('buych1','Python'),
+	 ('buych1','Java'),
+	 ('호박','C'),
+	 ('hwiizz','Python');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('kjw','python'),
+	 ('Emi','Python'),
+	 ('gyuggi','Python'),
+	 ('ksh','C'),
+	 ('ksh','Java'),
+	 ('ksh','Python'),
+	 ('jiang','Java'),
+	 ('hyukjin0324','Python'),
+	 ('binq','java'),
+	 ('wonji','C');
+INSERT INTO preferred_pl (nickname,lang) VALUES
+	 ('luxe','NA'),
+	 ('pingu','C++'),
+	 ('pingu','C'),
+	 ('jgf295','JavaScript'),
+	 ('gomi','C++'),
+	 ('jhkim','Python'),
+	 ('gosungosun','C++'),
+	 ('minlef','C++');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('pingu','002'),
+	 ('빈츠','002'),
+	 ('chi8ya72','003'),
+	 ('wonji','002'),
+	 ('10fp','002'),
+	 ('Jindol','003'),
+	 ('binq','002'),
+	 ('KM','002'),
+	 ('J','003'),
+	 ('jjamm','002');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('atm34','003'),
+	 ('imddungi','003'),
+	 ('Simple','002'),
+	 ('dotorimuk','003'),
+	 ('파송송계란탁','003'),
+	 ('Neeko','002'),
+	 ('jinnho','003'),
+	 ('gang','002'),
+	 ('yarr','003'),
+	 ('Myui','002');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('ZayZayYa','003'),
+	 ('databases','002'),
+	 ('cutdy','003'),
+	 ('gusals911','002'),
+	 ('wovow','003'),
+	 ('gosungosun','003'),
+	 ('hamtori','003'),
+	 ('hyukjin0324','002'),
+	 ('bnw','003'),
+	 ('Chloe','002');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('nh','003'),
+	 ('jkh','003'),
+	 ('mrlee','002'),
+	 ('0e','002'),
+	 ('Njz','003'),
+	 ('minlef','003'),
+	 ('I_am_youngjoon','002'),
+	 ('shu','003'),
+	 ('espoir','002'),
+	 ('hwiizz','003');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('sndlw','003'),
+	 ('wdragon','002'),
+	 ('sadie','003'),
+	 ('greencode','003'),
+	 ('gyuggi','003'),
+	 ('indy','003'),
+	 ('Dansoeun','003'),
+	 ('jhkim','003'),
+	 ('FelixBrown','003'),
+	 ('asdfdsa','003');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('hjh040506','002'),
+	 ('honey','002'),
+	 ('minimini','003'),
+	 ('yoon','002'),
+	 ('dGimbap','002'),
+	 ('haedal','003'),
+	 ('hans','002'),
+	 ('Jay','002'),
+	 ('soo','002'),
+	 ('luxe','002');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('nayana','003'),
+	 ('SIUU','003'),
+	 ('hehe','002'),
+	 ('lemon','002'),
+	 ('stone','002'),
+	 ('chobook','002'),
+	 ('stuyan','002'),
+	 ('b1n','003'),
+	 ('SY','002'),
+	 ('osm','003');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('kk','002'),
+	 ('student','002'),
+	 ('Kitty','003'),
+	 ('qwer','003'),
+	 ('kyung','002'),
+	 ('KONG','003'),
+	 ('atreides','003'),
+	 ('늉','002'),
+	 ('왐','002'),
+	 ('쥬','002');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('호박','002'),
+	 ('katal','002'),
+	 ('stud','003'),
+	 ('binch','002'),
+	 ('dorj','003'),
+	 ('sonyo','002'),
+	 ('PigeonLabs','002'),
+	 ('yuu','003'),
+	 ('drw','003'),
+	 ('coffee','003');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('unvoider','002'),
+	 ('snfd','003'),
+	 ('ksh','003'),
+	 ('penguin','003'),
+	 ('kjw','003'),
+	 ('wooclick','003'),
+	 ('ikmyeong2','003'),
+	 ('Yankee','003'),
+	 ('buych1','003'),
+	 ('bean','003');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('pizza','003'),
+	 ('jjiikkii','003'),
+	 ('goatCR7','003'),
+	 ('jiang','002'),
+	 ('noop','003'),
+	 ('gomi','002'),
+	 ('kkoffff','003'),
+	 ('swk','002'),
+	 ('chae','002'),
+	 ('prof','003');
+INSERT INTO student (nickname,`section`) VALUES
+	 ('gm','002'),
+	 ('Emi','002'),
+	 ('Braustübl','002'),
+	 ('Riceshower1','002'),
+	 ('jgf295','002'),
+	 ('smdg','002'),
+	 ('Mario','002'),
+	 ('jedrzej','002');
